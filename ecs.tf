@@ -60,6 +60,12 @@ resource "aws_instance" "ecs_host" {
               EOF
 
   user_data_replace_on_change = true
+
+  # Require the use of IMDSv2 for security
+  # docs: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 resource "aws_iam_role" "ecs_task_execution_role" {
