@@ -1,7 +1,9 @@
 # Change the file name to terraform.tfvars and set the values
 
-ssh_access_cidr     = ["xxx.xxx.xxx.xxx/32"]
-couchdb_access_cidr = ["yyy.yyy.yyy.yyy/32"]
+ssh_access_cidr          = ["xxx.xxx.xxx.xxx/32"]
+ssh_access_ipv6_cidr     = ["xxx:xxx:xxx:xxx::/64"]
+couchdb_access_cidr      = ["yyy.yyy.yyy.yyy/32"]
+couchdb_access_ipv6_cidr = ["yyy:yyy:yyy:yyy::/64"]
 
 couchdb_admin_user     = "YourAdminUser"
 couchdb_admin_password = "YourSecurePassword"
