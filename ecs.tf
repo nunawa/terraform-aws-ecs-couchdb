@@ -58,7 +58,6 @@ resource "aws_instance" "ecs_host" {
               echo ECS_CLUSTER=${aws_ecs_cluster.main.name} >> /etc/ecs/ecs.config
               
               mkdir -p /opt/couchdb/data
-              chown 5984:5984 /opt/couchdb/data
               EOF
 
   user_data_replace_on_change = true
