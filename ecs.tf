@@ -124,7 +124,7 @@ resource "aws_ecs_task_definition" "couchdb" {
       portMappings = [
         {
           containerPort = 5984
-          hostPort      = 5984
+          hostPort      = var.couchdb_access_port
           protocol      = "tcp"
         }
       ]

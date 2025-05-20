@@ -69,8 +69,8 @@ resource "aws_security_group" "ecs_instance_sg" {
   }
 
   ingress {
-    from_port        = 5984
-    to_port          = 5984
+    from_port        = var.couchdb_access_port
+    to_port          = var.couchdb_access_port
     protocol         = "tcp"
     cidr_blocks      = var.couchdb_access_cidr
     ipv6_cidr_blocks = var.couchdb_access_ipv6_cidr

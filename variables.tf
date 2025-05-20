@@ -38,6 +38,12 @@ variable "couchdb_access_ipv6_cidr" {
   # No default, should be provided via .tfvars or command line
 }
 
+variable "couchdb_access_port" {
+  description = "CouchDB access port"
+  type        = number
+  default     = 5984
+}
+
 variable "couchdb_admin_user" {
   description = "CouchDB administrator username"
   type        = string
