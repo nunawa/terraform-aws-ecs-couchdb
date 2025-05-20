@@ -162,8 +162,6 @@ resource "aws_ecs_service" "couchdb_service" {
   launch_type     = "EC2"
   desired_count   = 1
 
-  depends_on = [aws_instance.ecs_host, aws_iam_role_policy_attachment.ecs_instance_role_attachment]
-
   tags = {
     Name = "${var.project_name}-couchdb-service"
   }
